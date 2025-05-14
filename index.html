@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Tours and Travels</title>
+</head>
+<body>
+    <header class="hero">
+        <nav>
+          <h1>Dev Tours & Travel</h1>
+          <ul class="nav-links">
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hero-content">
+          <h2>Discover the Divine Beauty of Uttarakhand</h2>
+          <p>Curated experiences for the spiritual and adventurous soul</p>
+          <button onclick="scrollToSection('tours')">Explore Now</button>
+        </div>
+      </header>
+      <section id="about" class="section">
+        <h2>About Dev Tours</h2>
+        <p>Dev Tours is a locally based travel agency offering personalized and authentic experiences across Uttarakhand. Whether you're seeking the spiritual journey of the Char Dham Yatra or thrilling adventures in the Himalayas, we’ve got you covered.
+            With deep local knowledge and a passion for hospitality, we create meaningful travel experiences that reflect the true spirit of the region. From serene retreats to adrenaline-filled treks, our tours are crafted to suit every kind of traveler.</p>
+      </section>
+      <section id="tours" class="section">
+        <h2>Our Popular Tours</h2>
+        <div class="card-container">
+          <div class="card" onclick="showDetails('kedarnath')">
+            <img src="https://goadvenindia.com/wp-content/uploads/2024/04/Kedarnath-Yatra.jpg" alt="Kedarnath" />
+            <h3>Kedarnath Yatra</h3>
+            <p>Spiritual journey to the sacred Kedarnath Temple.</p>
+          </div>
+          <div class="card" onclick="showDetails('valley')">
+            <img src="https://www.bizarexpedition.com/bx/images/dmcimages/valleyofflowers.jpg" alt="Valley of Flowers" />
+            <h3>Valley of Flowers</h3>
+            <p>Explore the colorful alpine beauty of Uttarakhand's pride.</p>
+          </div>
+        </div>
+      </section>
+      <section id="gallery" class="section">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+          <img src="https://www.peakadventuretour.com/assets/imgs/badrinath-temple-bnr.webp" alt="Badrinath Temple" data-title="Badrinath Temple" data-description="The Badrinath Temple, situated in the Chamoli district of Uttarakhand, India, stands as one of the most revered pilgrimage sites in Hinduism. Dedicated to Lord Vishnu, it is part of the Char Dham Yatra and a prominent Divya Desam, representing a sacred abode of Vishnu.">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/haridwar-ganga-aarti_20171219221321.jpg" alt="Haridwar Ganga Aarti" data-title="Haridwar Ganga Aarti" data-description="The Ganga Aarti at Har Ki Pauri, Haridwar, is a deeply spiritual and visually captivating experience. This sacred ritual is held twice daily, at sunrise and sunset, to honor the River Ganga.">
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/19421484519_dd4e3f4009_b_20190514143704.jpg" alt="Nainital Lake" data-title="Nainital Lake" data-description="Naini Lake, also known as Nainital Lake, is a natural freshwater lake situated in the heart of Nainital, Uttarakhand, India. Renowned for its serene beauty and crescent shape, it is one of the most iconic hill station lakes in India.">
+          <img src="https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/11/Things-To-Do-In-Auli-Cover-Photo-3-840x425.jpg" alt="Auli" data-title="Auli" data-description="Auli is a Himalayan ski resort and hill station in the north Indian state of Uttarakhand. It’s surrounded by coniferous and oak forests, plus the Nanda Devi and Nar Parvat mountains.">
+        </div>
+    
+        <div id="photo-info" class="photo-info hidden">
+          <h3 id="info-title"></h3>
+          <p id="info-description"></p>
+        </div>
+      </section>
+      <div id="image-modal" class="modal hidden">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="caption">
+          <h3 id="modal-title"></h3>
+          <p id="modal-description"></p>
+        </div>
+      </div>
+      <button class="book-btn" onclick="goToNextPage()">Book your Appointment</button>
+      <footer>
+        <p>&copy; 2025 Dev Tours & Travel | Uttarakhand</p>
+      </footer>
+    
+</body>
+</html>
